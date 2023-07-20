@@ -43,7 +43,7 @@ const firebaseConfig = {
   export const auth = getAuth();
   export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
   export const signInWithGoogleRedirect = () => signInWithRedirect(auth, provider);
-  export const signInWithEmailPassword = (email, password) => signInWithEmailAndPassword(auth, email, password)
+  
   export const db = getFirestore();
 
   export const createUserDocumentFromAuth = async (userAuth, additionalInfo) => {
@@ -77,5 +77,7 @@ const firebaseConfig = {
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if(!email || !password) return;
 
-  createUserWithEmailAndPassword(auth, email, password);
+  return createUserWithEmailAndPassword(auth, email, password);
 }
+
+export const signInAuthUserWithEmailAndPassword = (email, password) => signInWithEmailAndPassword(auth, email, password)
