@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import {
     signInWithEmailPassword,
@@ -23,6 +23,7 @@ const SignUpForm = () => {
 
     const {displayName, email, password, confirmPassword} = formFields;
 
+    console.log('hit');
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     }
@@ -39,6 +40,7 @@ const SignUpForm = () => {
             console.log(user);
 
             await createUserDocumentFromAuth(user, { displayName });
+
             resetFormFields();
 
         }catch(error){
