@@ -57,25 +57,21 @@ const SignInForm = () => {
             <span>Sign in with your email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput 
-                label="Email" 
-                inputOptions={{
-                    type: "email",
-                    required: true, 
-                    onChange: handleChange,
-                    name: "email",
-                    value: email
-                }}
+                    label="Email" 
+                    type="email"
+                    required={true}
+                    onChange={handleChange}
+                    name="email"
+                    value={email}
                 />
 
                 <FormInput 
-                label="Password" 
-                inputOptions={{
-                    type: "password",
-                    required: true, 
-                    onChange: handleChange,
-                    name: "password",
-                    value: password
-                }}
+                    label="Password" 
+                    type ="password"
+                    required={true} 
+                    onChange={handleChange}
+                    name="password"
+                    value={password}
                 />
                 <div className="buttons-container">
                 <Button type="submit">Sign In</Button>

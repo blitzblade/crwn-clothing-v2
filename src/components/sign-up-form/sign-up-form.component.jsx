@@ -23,7 +23,6 @@ const SignUpForm = () => {
 
     const {displayName, email, password, confirmPassword} = formFields;
 
-    console.log('hit');
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     }
@@ -65,35 +64,35 @@ const SignUpForm = () => {
             <form onSubmit={handleSubmit}>
 
                 <FormInput label="Display Name"
-                    inputOptions = {{type: "text",
-                    required: true,
-                    onChange: handleChange,
-                    name: "displayName",
-                    value: displayName
-                    }}
+                    type="text"
+                    required={true}
+                    onChange={handleChange}
+                    name="displayName"
+                    value={displayName}
+                    
                 />
 
                 <FormInput label="Email"
-                    inputOptions = {{type: "email",
-                    required: true, 
-                    onChange: handleChange,
-                    name: "email",
-                    value: email}}
+                    type="email"
+                    required={true}
+                    onChange={handleChange}
+                    name="email"
+                    value={email}
                 />
 
                 <FormInput label="Password"
-                    inputOptions={{type: "password",
-                    required: true,
-                    onChange: handleChange,
-                    name: "password",
-                    value: password}}
+                    type="password"
+                    required={true}
+                    onChange={handleChange}
+                    name="password"
+                    value={password}
                 />
                 <FormInput label="Confirm Password"
-                    inputOptions={{type: "password",
-                    required: true,
-                    onChange: handleChange, 
-                    name: "confirmPassword",
-                    value: confirmPassword}}
+                    type="password"
+                    required={true}
+                    onChange={handleChange} 
+                    name="confirmPassword"
+                    value={confirmPassword}
                 />
                 
                 <Button  type="submit"
